@@ -11,10 +11,11 @@
 
 4. Rewrite the each() method that prints all students using while or until control flow methods (Loops).
    # DONE
-   
+
 5. Our code only works with the student name and cohort. Add more information: hobbies,
    country of birth, height, etc.
-
+   # DONE
+   
 6. Research how the method center() of the String class works. Use it in your code to make the
    output beautifully aligned.
 
