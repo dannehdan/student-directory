@@ -15,9 +15,10 @@
 5. Our code only works with the student name and cohort. Add more information: hobbies,
    country of birth, height, etc.
    # DONE
-   
+
 6. Research how the method center() of the String class works. Use it in your code to make the
    output beautifully aligned.
+   
 
 7. In the input_students method the cohort value is hard-coded. How can you ask for both the
    name and the cohort? What if one of the values is empty? Can you supply a default value?

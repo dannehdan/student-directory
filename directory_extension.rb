@@ -80,11 +80,12 @@ def input_students_long
   students = []
 
   # get the first name
+  puts "Next student name"
   name = gets.chomp
 
   # while the name is not empty, repeat this code
   while !name.empty? do
-    # add the student has to the array
+    # add the students to the array
     puts "What are their hobbies"
     hobbies = gets.chomp
     puts "What is their country of birth?"
@@ -100,8 +101,8 @@ def input_students_long
     }
     
     puts "Now we have #{students.count} students"
-
     # get another name from the user
+    puts "Next student name"
     name = gets.chomp
   end
 
@@ -109,9 +110,11 @@ def input_students_long
   students
 end
 
-students = input_students_long
+# students = input_students_long
+students = input_students
 print_header
-print_long(students)
+print(students)
+# print_long(students)
 # print_while(students)
 print_footer(students)
 # print_with_first_letter(students)
