@@ -9,6 +9,14 @@ def print(students)
   end
 end
 
+def number_students(students)
+  if students.length == 1
+    puts "Now we have #{students.count} student"
+  else
+    puts "Now we have #{students.count} students"
+  end
+end
+
 def print_cohort(students)
   cohort_hash = {}
 
@@ -85,7 +93,7 @@ def input_students
     cohort = gets.chomp
     cohort == "" ? cohort = :november : cohort
     students << {name: name, cohort: cohort.to_sym}
-    puts "Now we have #{students.count} students"
+    number_students(students)
 
     # get another name from the user
     puts "Next student name"
