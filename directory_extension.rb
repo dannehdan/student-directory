@@ -18,6 +18,10 @@ def number_students(students)
 end
 
 def print_cohort(students)
+  if students.length == 0
+    return
+  end
+  
   cohort_hash = {}
 
   students.each do |student|
