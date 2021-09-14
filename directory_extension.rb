@@ -9,6 +9,14 @@ def print(students)
   end
 end
 
+def print_while(students)
+  index = 0
+  while index < students.length do
+    puts "#{students[index][:name]} (#{students[index][:cohort]} cohort)"
+    index += 1
+  end
+end
+
 def print_with_first_letter(students)
   puts "Which letter would you like to view"
   letter = gets.chomp
@@ -59,7 +67,8 @@ end
 
 students = input_students
 print_header
-print(students)
+# print(students)
+print_while(students)
 print_footer(students)
 # print_with_first_letter(students)
-print_short_names(students)
+# print_short_names(students)

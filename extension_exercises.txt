@@ -8,9 +8,10 @@
 
 3. Modify your program to only print the students whose name is shorter than 12 characters.
    # DONE
-   
-4. Rewrite the each() method that prints all students using while or until control flow methods (Loops).
 
+4. Rewrite the each() method that prints all students using while or until control flow methods (Loops).
+   # DONE
+   
 5. Our code only works with the student name and cohort. Add more information: hobbies,
    country of birth, height, etc.
 
