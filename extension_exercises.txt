@@ -24,6 +24,7 @@
    name and the cohort? What if one of the values is empty? Can you supply a default value?
    The input will be given to you as a string? How will you convert it to a symbol?
    What if the user makes a typo?
+   # DONE
 
 8. Once you complete the previous exercise, change the way the users are displayed: print them
    grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the map() 
