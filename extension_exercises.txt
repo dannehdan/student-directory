@@ -30,6 +30,7 @@
    grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the map() 
    method may be useful but it's not the only option), iterate over it and only print the students
    from that cohort.
+   # DONE
 
 9. Right now if we have only one student, the user will see a message "Now we have 1 students",
    whereas it should be "Now we have 1 student". How can you fix it so that it uses the singular

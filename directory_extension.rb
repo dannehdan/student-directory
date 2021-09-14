@@ -9,6 +9,25 @@ def print(students)
   end
 end
 
+def print_cohort(students)
+  cohort_hash = {}
+
+  students.each do |student|
+    cohort = student[:cohort]
+    name = student[:name]
+
+    if cohort_hash[cohort] == nil
+      cohort_hash[cohort.to_sym] = [name]
+    else
+      cohort_hash[cohort.to_sym].push(name)
+    end
+  end
+
+  cohort_hash.each do |key, value|
+    puts "Students in the #{key} cohort: #{value.join(", ")}"
+  end
+end
+
 def print_long(students)
   students.each_with_index do |student, index|
     puts "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
@@ -117,7 +136,8 @@ end
 # students = input_students_long
 students = input_students
 print_header
-print(students)
+# print(students)
+print_cohort(students)
 # print_long(students)
 # print_while(students)
 print_footer(students)
