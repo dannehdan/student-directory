@@ -9,11 +9,20 @@ def print(students)
   end
 end
 
-def print_s(students)
+def print_with_first_letter(students)
   puts "Which letter would you like to view"
   letter = gets.chomp
   students.each do |student|
     if student[:name][0,1].upcase == letter.upcase
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    else
+    end
+  end
+end
+
+def print_short_names(students)
+  students.each do |student|
+    if student[:name].length < 12
       puts "#{student[:name]} (#{student[:cohort]} cohort)"
     else
     end
@@ -52,4 +61,5 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
-print_s(students)
+# print_with_first_letter(students)
+print_short_names(students)
