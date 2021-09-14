@@ -9,6 +9,17 @@ def print(students)
   end
 end
 
+def print_s(students)
+  puts "Which letter would you like to view"
+  letter = gets.chomp
+  students.each do |student|
+    if student[:name][0,1].upcase == letter.upcase
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    else
+    end
+  end
+end
+
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
 end
@@ -41,3 +52,4 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
+print_s(students)
