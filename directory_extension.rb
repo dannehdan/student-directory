@@ -45,7 +45,8 @@ def print_short_names(students)
 end
 
 def print_footer(names)
-  puts "Overall, we have #{names.count} great students"
+  footer =  " Overall, we have #{names.count} great students ".center(100,"-")
+  puts footer
 end
 
 def input_students
@@ -65,6 +66,7 @@ def input_students
     puts "Now we have #{students.count} students"
 
     # get another name from the user
+    puts "Next student name"
     name = gets.chomp
   end
 
@@ -80,7 +82,6 @@ def input_students_long
   students = []
 
   # get the first name
-  puts "Next student name"
   name = gets.chomp
 
   # while the name is not empty, repeat this code
