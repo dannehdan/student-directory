@@ -7,17 +7,28 @@ def interactive_menu
   end
 end
 
+def feedback(choice)
+  puts "You selected #{choice}"
+end
+
 def process(selection)
 	case selection
 		when "1"
+      feedback(selection)
 			input_students
 		when "2"
+      feedback(selection)
 			show_students
     when "3"
-      save_students
+      feedback(selection)
+      puts "Which file would you like to save to? If none, just hit enter"
+      save_students(STDIN.gets.chomp)
     when "4"
-      load_students
+      feedback(selection)
+      puts "Which file would you like to load? If none, just hit enter"
+      load_students(STDIN.gets.chomp)
 		when "9"
+      puts "Goodbye"
 			exit
 		else
 			puts "I don't know what you mean, try again"
@@ -37,24 +48,24 @@ def try_load_students
 end
 
 def load_students(filename = "students.csv")
-  file = File.open(filename, "r")
-  file.readlines.each do |line|
-  name, cohort = line.chomp.split(',')
-    add_student(name, cohort)
+  file = File.open(filename, "r") do |file|
+    file.readlines.each do |line|
+    name, cohort = line.chomp.split(',')
+      add_student(name, cohort)
+    end
   end
-  file.close
 end
 
-def save_students
+def save_students(filename = "students.csv")
   # open the file for writing
-  file = File.open("students.csv", "w")
+  file = File.open(filname, "w") do |file|
   # iterate over the array of students
-  @students.each do |student|
-    student_data = [student[:name], student[:cohort]]
-    csv_line = student_data.join(",")
-    file.puts csv_line
-  end
-  file.close
+    @students.each do |student|
+      student_data = [student[:name], student[:cohort]]
+      csv_line = student_data.join(",")
+      file.puts csv_line
+    end
+  end 
 end
 
 def add_student(name, cohort)
